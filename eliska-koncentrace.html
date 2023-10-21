@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Inclusive Components</title>
+    <meta
+      name="description"
+      content="A blog trying to be a pattern library. All about designing inclusive web interfaces, piece by piece."
+    />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Atkinson+Hyperlegible&display=swap"
+      rel="stylesheet"
+      media="all"
+      onload="if(media!='all')media='all'"
+    />
+
+    <link rel="canonical" href="http://inclusive-components.design/" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+
+    <meta property="og:site_name" content="Inclusive Components" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Inclusive Components" />
+    <meta
+      property="og:description"
+      content="A blog trying to be a pattern library. All about designing inclusive web interfaces, piece by piece."
+    />
+    <meta property="og:url" content="http://inclusive-components.design/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Inclusive Components" />
+    <meta
+      name="twitter:description"
+      content="A blog trying to be a pattern library. All about designing inclusive web interfaces, piece by piece."
+    />
+    <meta name="twitter:url" content="http://inclusive-components.design/" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Website",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Inclusive Components",
+          "logo": "http://inclusive-components.design/ghost/img/ghosticon.jpg"
+        },
+        "url": "https://inclusive-components.design/",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "http://inclusive-components.design"
+        },
+        "description": "A blog trying to be a pattern library. All about designing inclusive web interfaces, piece by piece."
+      }
+    </script>
+
+    <meta name="generator" content="Ghost 0.11" />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Inclusive Components"
+      href="https://inclusive-components.design/rss/"
+    />
+
+    <!-- Import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+    <script src="/eliska-js.js" defer></script>
+  </head>
+  <body>
+    <a href="#main">Přeskočit na obsah</a>
+    <main id="main" class="central">
+      <section>
+        <h1>
+          Příklad jak může osoba s poruchou autistického spektra vnímat text
+        </h1>
+        <p>Přehrajte si audio stopu a snažte se pochopit text.</p>
+        <hr />
+
+        
+        <audio id="track">
+          <source
+            src="https://cdn.glitch.global/be0cbb6e-6722-4fa3-a3ee-5bc671502e8f/autism-audio.mp3?v=1648279490431"
+            type="audio/mpeg"
+          />
+        </audio>
+        
+        <div id="player-container">
+          <div id="play-pause" class="play">Přehrát</div>
+        </div>
+        <hr />
+        <p style="color: orange">
+          Tuto úlohu musíte splnit do
+          <strong id="time">02:00</strong> minut!!
+        </p>
+
+        <p class="wds-paragraph-animation">
+          Nesmíme však zapomínat, že upřesnění a rozvoj struktur jednoznačně
+          předurčuje implementaci systému masové účasti. Ideové úvahy nejvyššího
+          řádu a rovněž stálé, informačně-propagandistické zabezpečení naší
+          práce vyzaduje rozšiřování logistických prostředků a tvorby nových
+          zdrojů.
+        </p>
+        <h2 class="wds-heading-animation">Nadpis pro odstavec</h2>
+        <p class="wds-text-element-2wds-text-animation-2">
+          Nesmíme však zapomínat, že upřesnění a rozvoj struktur jednoznačně
+          předurčuje implementaci systému masové účasti. Ideové úvahy nejvyššího
+          řádu a rovněž stálé, informačně-propagandistické zabezpečení naší
+          práce vyzaduje rozšiřování logistických prostředků a tvorby nových
+          zdrojů. Stejně tak rámec stavu a vývoje postavení hraje závažnou roli
+          při utváření pozic jednotlivých účastníků k zadaným úkolům.
+        </p>
+
+        <p class="wds-text-element-1 wds-text-animation-1">
+          Nový model organizační činnosti dostatečně oddaluje propad
+          odpovídajících podmínek aktivizace. Tímto způsobem další rozvoj
+          různých forem činnosti zabezpečuje širokému okruhu specialistů účast
+          při tvorbě systému výchovy pracovníků odpovídajících aktuálním
+          potřebám. Závažnost těchto problémů je natolik zřejmá, že počátek
+          každodenní práce na poli formování pozice představuje pozoruhodný
+          experiment prověrky nových návrhů.
+        </p>
+      </section>
+    </main>
+    <footer class="central">
+      <div class="site-meta">
+        <p>
+          <a href="/eliska.html"
+            ><span aria-hidden="true">← </span>Zpět na profil Elišky</a
+          >
+        </p>
+        <p>Navrhl <a href="https://github.com/hlavsa">hlavsa</a>.</p>
+      </div>
+    </footer>
+    <script>
+          function startTimer(duration, display) {
+            var timer = duration,
+              minutes,
+              seconds;
+            setInterval(function () {
+              minutes = parseInt(timer / 60, 10);
+              seconds = parseInt(timer % 60, 10);
+
+              minutes = minutes < 10 ? "0" + minutes : minutes;
+              seconds = seconds < 10 ? "0" + seconds : seconds;
+
+              display.textContent = minutes + ":" + seconds;
+
+              if (--timer < 0) {
+                timer = duration;
+              }
+            }, 1000);
+          }
+
+          window.onload = function () {
+            var duration = 60 * 2,
+              display = document.querySelector("#time");
+            startTimer(duration, display);
+          };
+        </script>
+  </body>
+</html>
