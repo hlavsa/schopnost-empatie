@@ -68,8 +68,8 @@
     />
 
     <!-- Import the webpage's stylesheet -->
-    <link rel="stylesheet" href="/style.css" />
-    <script src="/eliska-js.js" defer></script>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./eliska-js.js" defer></script>
   </head>
   <body>
     <a href="#main">Přeskočit na obsah</a>
@@ -81,14 +81,13 @@
         <p>Přehrajte si audio stopu a snažte se pochopit text.</p>
         <hr />
 
-        
         <audio id="track">
           <source
             src="https://cdn.glitch.global/be0cbb6e-6722-4fa3-a3ee-5bc671502e8f/autism-audio.mp3?v=1648279490431"
             type="audio/mpeg"
           />
         </audio>
-        
+
         <div id="player-container">
           <div id="play-pause" class="play">Přehrát</div>
         </div>
@@ -137,30 +136,30 @@
       </div>
     </footer>
     <script>
-          function startTimer(duration, display) {
-            var timer = duration,
-              minutes,
-              seconds;
-            setInterval(function () {
-              minutes = parseInt(timer / 60, 10);
-              seconds = parseInt(timer % 60, 10);
+      function startTimer(duration, display) {
+        var timer = duration,
+          minutes,
+          seconds;
+        setInterval(function () {
+          minutes = parseInt(timer / 60, 10);
+          seconds = parseInt(timer % 60, 10);
 
-              minutes = minutes < 10 ? "0" + minutes : minutes;
-              seconds = seconds < 10 ? "0" + seconds : seconds;
+          minutes = minutes < 10 ? "0" + minutes : minutes;
+          seconds = seconds < 10 ? "0" + seconds : seconds;
 
-              display.textContent = minutes + ":" + seconds;
+          display.textContent = minutes + ":" + seconds;
 
-              if (--timer < 0) {
-                timer = duration;
-              }
-            }, 1000);
+          if (--timer < 0) {
+            timer = duration;
           }
+        }, 1000);
+      }
 
-          window.onload = function () {
-            var duration = 60 * 2,
-              display = document.querySelector("#time");
-            startTimer(duration, display);
-          };
-        </script>
+      window.onload = function () {
+        var duration = 60 * 2,
+          display = document.querySelector("#time");
+        startTimer(duration, display);
+      };
+    </script>
   </body>
 </html>

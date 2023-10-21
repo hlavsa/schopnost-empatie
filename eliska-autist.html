@@ -68,10 +68,10 @@
     />
 
     <!-- Import the webpage's stylesheet -->
-    <link rel="stylesheet" href="/style.css" />
-    <link rel="stylesheet" href="/eliska-css.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./eliska-css.css" />
     <!-- Import the webpage's javascript file -->
-    <script src="/eliska-js.js" defer></script>
+    <script src="./eliska-js.js" defer></script>
   </head>
   <body>
     <a href="#main">Přeskočit na obsah</a>
@@ -80,13 +80,13 @@
         <h1>
           Příklad jak může osoba s poruchou autistického spektra vnímat text
         </h1>
-        
-        <hr>
-        <p style="color: orange;">
+
+        <hr />
+        <p style="color: orange">
           Tuto úlohu musíte splnit do
           <strong id="time">02:00</strong> minut!!
         </p>
-        
+
         <p class="wds-paragraph-animation">
           Nesmíme však zapomínat, že upřesnění a rozvoj struktur jednoznačně
           předurčuje implementaci systému masové účasti. Ideové úvahy nejvyššího
@@ -94,9 +94,7 @@
           práce vyzaduje rozšiřování logistických prostředků a tvorby nových
           zdrojů.
         </p>
-        <h2 class="wds-heading-animation">
-          Nadpis pro odstavec
-        </h2>
+        <h2 class="wds-heading-animation">Nadpis pro odstavec</h2>
         <p class="wds-text-element-2wds-text-animation-2">
           Nesmíme však zapomínat, že upřesnění a rozvoj struktur jednoznačně
           předurčuje implementaci systému masové účasti. Ideové úvahy nejvyššího
@@ -105,7 +103,7 @@
           zdrojů. Stejně tak rámec stavu a vývoje postavení hraje závažnou roli
           při utváření pozic jednotlivých účastníků k zadaným úkolům.
         </p>
-        
+
         <p class="wds-text-element-1 wds-text-animation-1">
           Nový model organizační činnosti dostatečně oddaluje propad
           odpovídajících podmínek aktivizace. Tímto způsobem další rozvoj
@@ -120,36 +118,38 @@
     <footer class="central">
       <div class="site-meta">
         <p>
-          <a href="/eliska.html"><span aria-hidden="true">← </span>Zpět na profil Elišky</a>
+          <a href="/eliska.html"
+            ><span aria-hidden="true">← </span>Zpět na profil Elišky</a
+          >
         </p>
         <p>Navrhl <a href="https://github.com/hlavsa">hlavsa</a>.</p>
       </div>
     </footer>
     <script>
-          function startTimer(duration, display) {
-            var timer = duration,
-              minutes,
-              seconds;
-            setInterval(function () {
-              minutes = parseInt(timer / 60, 10);
-              seconds = parseInt(timer % 60, 10);
+      function startTimer(duration, display) {
+        var timer = duration,
+          minutes,
+          seconds;
+        setInterval(function () {
+          minutes = parseInt(timer / 60, 10);
+          seconds = parseInt(timer % 60, 10);
 
-              minutes = minutes < 10 ? "0" + minutes : minutes;
-              seconds = seconds < 10 ? "0" + seconds : seconds;
+          minutes = minutes < 10 ? "0" + minutes : minutes;
+          seconds = seconds < 10 ? "0" + seconds : seconds;
 
-              display.textContent = minutes + ":" + seconds;
+          display.textContent = minutes + ":" + seconds;
 
-              if (--timer < 0) {
-                timer = duration;
-              }
-            }, 1000);
+          if (--timer < 0) {
+            timer = duration;
           }
+        }, 1000);
+      }
 
-          window.onload = function () {
-            var duration = 60 * 2,
-              display = document.querySelector("#time");
-            startTimer(duration, display);
-          };
-        </script>
+      window.onload = function () {
+        var duration = 60 * 2,
+          display = document.querySelector("#time");
+        startTimer(duration, display);
+      };
+    </script>
   </body>
 </html>
